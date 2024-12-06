@@ -34,7 +34,7 @@ const projects = [
     title: "PawPals - Community-Driven Animal Adoption",
     description: "PawPals is a decentralized platform that simplifies animal adoption and fosters community support for ongoing care.",
     image: "/adoption.jpg",
-    technologies: ["Next.js", "Solidity", "MongoDB", "Github Actions", "Ethers.js"],
+    technologies: ["Next.js", "Solidity", "Github Actions", "Ethers.js"],
     liveUrl: "https://taskmanager.devrathod.com",
     githubUrl: "https://github.com/devrathod13/PawPals.git"
   },
@@ -42,7 +42,7 @@ const projects = [
     title: "The Agaries - Empowering Traditional Salt Farmers. ",
     description: "The Agaries is an innovative platform designed to uplift traditional salt farmers, providing a space for supporters to learn about their challenges and fund essential tools for sustainable growth.",
     image: "/Salt.webp",
-    technologies: ["Next.js", "Node.js", "Solidity", "MongoDB", "Github Actions", "Ethers.js"],
+    technologies: ["Next.js", "Node.js", "Solidity", "Github Actions", "Ethers.js"],
     liveUrl: "https://taskmanager.devrathod.com",
     githubUrl: "https://github.com/devrathod13/PawPals.git"
   },
@@ -66,7 +66,6 @@ const skills = {
     { name: 'RESTful APIs', level: 88 },
   ],
   database: [
-    { name: 'MongoDB', level: 88 },
     { name: 'PostgreSQL', level: 82 },
     { name: 'AWS dynamoDB', level: 90 },
   ],
