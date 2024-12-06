@@ -19,7 +19,7 @@ const ContactForm = () => {
             await new Promise(resolve => setTimeout(resolve, 1000));
             toast.success('Message sent successfully!');
             setFormData({ name: '', email: '', message: '' });
-        } catch (error) {
+        } catch (_error) {
             toast.error('Failed to send message. Please try again.');
         } finally {
             setIsSubmitting(false);

@@ -2,7 +2,7 @@ import { Inter, Poppins, Montserrat } from 'next/font/google'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { FaGithub, FaLinkedin, FaTwitter, FaMoon, FaSun, FaExternalLinkAlt, FaDownload } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter, FaMoon, FaSun, FaDownload } from 'react-icons/fa'
 import TypedText from '../components/TypedText'
 import ParticleBackground from '../components/ParticleBackground'
 import ContactForm from '../components/ContactForm'
@@ -171,10 +171,10 @@ export default function Home() {
       <section className={`${poppins.className} min-h-screen flex items-center justify-center px-4 bg-opacity-90 bg-[var(--background)]`}>
         <div className="text-center space-y-8 relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold">
-            Hi, I'm <span className="gradient-text">Dev Rathod</span>
+            Hi, I&apos;m <span className="gradient-text">Dev Rathod</span>
           </h1>
           <div className="text-xl md:text-2xl text-[var(--text)] opacity-90">
-            I'm a{' '}
+            I&apos;m a{' '}
             <TypedText
               strings={[
                 'Full Stack Developer',
@@ -217,7 +217,7 @@ export default function Home() {
           <h2 className="section-title">About Me</h2>
           <div className="space-y-6 text-lg mb-12">
             <p className="opacity-80">
-              I'm a software engineer with a passion for building exceptional digital experiences.
+              I&apos;m a software engineer with a passion for building exceptional digital experiences.
               With expertise in modern web technologies, I specialize in creating scalable and
               maintainable applications that solve real-world problems.
             </p>
@@ -338,10 +338,12 @@ export default function Home() {
                 className="card group transform hover:scale-105 transition-all duration-300 bg-white dark:bg-white"
               >
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <Image
+                    src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover"
+                    width={500}
+                    height={300}
+                    className="rounded-lg shadow-lg transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center">
                     <div className="text-white text-center p-4">
@@ -392,9 +394,9 @@ export default function Home() {
           <h2 className="section-title">Get In Touch</h2>
           <div className="mt-12 grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Let's Connect</h3>
+              <h3 className="text-2xl font-bold mb-4">Let&apos;s Connect</h3>
               <p className="opacity-80 mb-6">
-                I'm always interested in hearing about new projects and opportunities.
+                I&apos;m always interested in hearing about new projects and opportunities.
                 Whether you have a question or just want to say hi, feel free to drop me a message!
               </p>
               <div className="space-y-4">
