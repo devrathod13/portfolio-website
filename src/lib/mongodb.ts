@@ -11,10 +11,10 @@ interface MongooseCache {
 
 // Declare global type for mongoose cache
 declare global {
-    var mongoose: MongooseCache | undefined;
+    let mongoose: MongooseCache | undefined;
 }
 
-let cached = global.mongoose || { conn: null, promise: null };
+const cached = global.mongoose || { conn: null, promise: null };
 
 if (!global.mongoose) {
     global.mongoose = cached;

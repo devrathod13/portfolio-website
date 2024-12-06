@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
 import toast from 'react-hot-toast';
 
@@ -33,12 +33,12 @@ export default function AdminPage() {
             } else {
                 toast.error('Invalid password');
             }
-        } catch (error) {
+        } catch {
             toast.error('Authentication failed');
         }
     };
 
-    const fetchMessages = async () => {
+    const fetchMessages = useCallback(async () => {
         setIsLoading(true);
         try {
             const response = await fetch('/api/messages', {
@@ -54,12 +54,12 @@ export default function AdminPage() {
                 setIsAuthenticated(false);
                 localStorage.removeItem('adminPassword');
             }
-        } catch (error) {
+        } catch {
             toast.error('Failed to fetch messages');
         } finally {
             setIsLoading(false);
         }
-    };
+    }, [password]);
 
     useEffect(() => {
         const savedPassword = localStorage.getItem('adminPassword');
@@ -68,7 +68,7 @@ export default function AdminPage() {
             setIsAuthenticated(true);
             fetchMessages();
         }
-    }, []);
+    }, [fetchMessages]);
 
     if (!isAuthenticated) {
         return (
