@@ -14,67 +14,89 @@ const ContactForm = () => {
         setIsSubmitting(true);
 
         try {
-            // Here you would typically send the form data to your backend or email service
-            // For now, we'll just simulate a successful submission
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.message || 'Something went wrong');
+            }
+
             toast.success('Message sent successfully!');
             setFormData({ name: '', email: '', message: '' });
-        } catch (_error) {
-            console.error('Form submission error:', _error);
+        } catch (error) {
+            console.error('Form submission error:', error);
             toast.error('Failed to send message. Please try again.');
         } finally {
             setIsSubmitting(false);
         }
     };
 
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
     return (
         <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-                <label htmlFor="name" className="block text-sm font-medium opacity-80 mb-1">
+                <label htmlFor="name" className="block text-sm font-medium mb-1">
                     Name
                 </label>
                 <input
                     type="text"
                     id="name"
+                    name="name"
                     value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="input-field"
+                    onChange={handleChange}
                     required
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     disabled={isSubmitting}
                 />
             </div>
             <div>
-                <label htmlFor="email" className="block text-sm font-medium opacity-80 mb-1">
+                <label htmlFor="email" className="block text-sm font-medium mb-1">
                     Email
                 </label>
                 <input
                     type="email"
                     id="email"
+                    name="email"
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="input-field"
+                    onChange={handleChange}
                     required
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     disabled={isSubmitting}
                 />
             </div>
             <div>
-                <label htmlFor="message" className="block text-sm font-medium opacity-80 mb-1">
+                <label htmlFor="message" className="block text-sm font-medium mb-1">
                     Message
                 </label>
                 <textarea
                     id="message"
-                    rows={4}
+                    name="message"
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="input-field"
+                    onChange={handleChange}
                     required
+                    rows={4}
+                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     disabled={isSubmitting}
-                ></textarea>
+                />
             </div>
             <button
                 type="submit"
-                className="button-primary w-full"
                 disabled={isSubmitting}
+                className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors disabled:opacity-50"
             >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>

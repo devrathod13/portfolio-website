@@ -62,7 +62,7 @@ const skills = {
     { name: 'Node.js', level: 85 },
     { name: 'Python', level: 80 },
     { name: 'Express', level: 82 },
-    { name: 'Django', level: 75 },
+    { name: 'Solidity', level: 90 },
     { name: 'RESTful APIs', level: 88 },
   ],
   database: [
