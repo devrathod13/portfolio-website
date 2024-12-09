@@ -35,7 +35,7 @@ const projects = [
     description: "PawPals is a decentralized platform that simplifies animal adoption and fosters community support for ongoing care.",
     image: "/adoption.jpg",
     technologies: ["Next.js", "Solidity", "Github Actions", "Ethers.js"],
-    liveUrl: "https://taskmanager.devrathod.com",
+    liveUrl: "https://paw-pals.vercel.app",
     githubUrl: "https://github.com/devrathod13/PawPals.git"
   },
   {
