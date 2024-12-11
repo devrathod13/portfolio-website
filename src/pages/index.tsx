@@ -8,6 +8,7 @@ import ParticleBackground from '../components/ParticleBackground'
 import ContactForm from '../components/ContactForm'
 import { Toaster } from 'react-hot-toast'
 
+
 const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({
   weight: ['400', '500', '600', '700'],
