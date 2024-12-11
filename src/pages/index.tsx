@@ -23,33 +23,30 @@ const montserrat = Montserrat({
 // Project data
 const projects = [
   {
-    title: "Auto-Insure - Peer to peer Blockchain based Car Insurance",
-    description: "Pinsurance is a blockchain-based P2P DeFi platform for car insurance.",
-    image: "/images.jpeg",
-    technologies: ["React.js", "Node.js", "TypeScript", "Tailwind CSS","Solidity","Ether.js", "React"],
-    liveUrl: "https://devrathod.com",
-    githubUrl: "https://github.com/devrathod13/Auto-Insure.git"
-  },
-  {
     title: "PawPals - Community-Driven Animal Adoption",
     description: "PawPals is a decentralized platform that simplifies animal adoption and fosters community support for ongoing care.",
     image: "/adoption.jpg",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Github Actions",],
+    technologies: ["Next.js", "TypeScript","Tailwind CSS", "Github Actions", "PostgreSQL"],
     liveUrl: "https://paw-pals-dev-rathods-projects.vercel.app/",
     githubUrl: "https://github.com/devrathod13/PawPals.git"
   },
   {
-    title: "The Agaries - Empowering Traditional Salt Farmers. ",
-    description: "The Agaries is an innovative platform designed to uplift traditional salt farmers, providing a space for supporters to learn about their challenges and fund essential tools for sustainable growth.",
+    title: "The Agariyas - (P2P) blockchain based charity. ",
+    description: "The Agariyas is an innovative platform designed to uplift traditional salt farmers, providing a space for supporters to learn about their challenges and fund essential tools for sustainable growth.",
     image: "/Salt.webp",
-    technologies: ["Next.js", "Node.js", "Solidity", "Github Actions", "Ethers.js"],
-    liveUrl: "https://taskmanager.devrathod.com",
-    githubUrl: "https://github.com/devrathod13/PawPals.git"
+    technologies: ["Next.js", "Node.js","TypeScript", "Github Actions", "versel", "MongoDB" , "flask", "AWS"],
+    liveUrl: "https://the-agaries.vercel.app/",
+    githubUrl: "https://github.com/devrathod13/The-Agaries.git"
   },
-  // Add more projects as needed
+  {
+    title: "Auto-Insure - Peer to peer Blockchain based Car Insurance",
+    description: "Pinsurance is a blockchain-based P2P DeFi platform for car insurance.",
+    image: "/images.jpeg",
+    technologies: ["React.js", "Node.js", "TypeScript", "Tailwind CSS","Solidity","Ether.js", "Python"],
+    githubUrl: "https://github.com/devrathod13/Auto-Insure.git"
+  },
 ]
 
-// Updated and expanded skill data
 const skills = {
   frontend: [
     { name: 'React/Next.js', level: 90 },
