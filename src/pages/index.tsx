@@ -8,7 +8,6 @@ import ParticleBackground from '../components/ParticleBackground'
 import ContactForm from '../components/ContactForm'
 import { Toaster } from 'react-hot-toast'
 
-
 const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({
   weight: ['400', '500', '600', '700'],
@@ -188,7 +187,7 @@ export default function Home() {
             <Link href="#projects" className="button-primary">View My Work</Link>
             <Link href="#contact" className="button-secondary">Get In Touch</Link>
             <a 
-              href="/DevRathod-resume.pdf" 
+              href="/Dev Rathod Resume.pdf" 
               download 
               className="button-secondary flex items-center gap-2"
             >
