@@ -63,8 +63,10 @@ const skills = {
     { name: 'RESTful APIs', level: 88 },
   ],
   database: [
+    { name: 'MySQL', level: 85 },
     { name: 'PostgreSQL', level: 82 },
     { name: 'AWS dynamoDB', level: 90 },
+    { name: 'MongoDB', level: 95 },
   ],
   cloud: [
     { name: 'AWS', level: 75 },
@@ -200,7 +202,7 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/devrathod1307" target="_blank" rel="noopener noreferrer" className="social-link text-2xl">
               <FaLinkedin />
             </a>
-            <a href="https://twitter.com/devrathod1996" target="_blank" rel="noopener noreferrer" className="social-link text-2xl">
+            <a href="https://twitter.com/devrathod5117" target="_blank" rel="noopener noreferrer" className="social-link text-2xl">
               <FaTwitter />
             </a>
           </div>
@@ -415,7 +417,7 @@ export default function Home() {
                     <a href="https://linkedin.com/in/devrathod1307" target="_blank" rel="noopener noreferrer" className="social-link text-xl">
                       <FaLinkedin />
                     </a>
-                    <a href="https://twitter.com/devrathod1307" target="_blank" rel="noopener noreferrer" className="social-link text-xl">
+                    <a href="https://twitter.com/devrathod5117" target="_blank" rel="noopener noreferrer" className="social-link text-xl">
                       <FaTwitter />
                     </a>
                   </div>
