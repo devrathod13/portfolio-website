@@ -58,7 +58,7 @@ const skills = {
   backend: [
     { name: 'Node.js', level: 85 },
     { name: 'Python', level: 80 },
-    { name: 'Express', level: 82 },
+    { name: 'JAVA', level: 82 },
     { name: 'Solidity', level: 90 },
     { name: 'RESTful APIs', level: 88 },
   ],
@@ -178,7 +178,8 @@ export default function Home() {
                 'Full Stack Developer',
                 'BlockChain Developer',
                 'Problem Solver',
-                'Tech Innovator'
+                'Tech Innovator',
+                'JAVA Developer',
               ]}
               className="gradient-text font-semibold"
             />
