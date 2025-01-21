@@ -188,7 +188,7 @@ export default function Home() {
             <Link href="#projects" className="button-primary">View My Work</Link>
             <Link href="#contact" className="button-secondary">Get In Touch</Link>
             <a 
-              href="/Dev Rathod Resume.pdf" 
+              href="/Dev_Rathod_updated.pdf" 
               download 
               className="button-secondary flex items-center gap-2"
             >
